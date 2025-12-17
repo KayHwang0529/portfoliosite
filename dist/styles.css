@@ -1,0 +1,180 @@
+/* custom styles — at least five selectors and five properties */
+body {
+    background-color: #042243; /* property: background-color */
+    color: #e3e4f0;           /* property: color */
+    font-family: "Courier Prime", monospace; /* property: font-family */
+    margin: 0;                /* property: margin */
+}
+
+.nav-custom {
+    background-color: #bfe7ff !important; /* light blue */
+    border-bottom: 1px solid rgba(4,34,67,0.08);
+}
+
+/* ensure navbar text is readable on the light background */
+.nav-custom .navbar-brand,
+.nav-custom .nav-link {
+    color: #042243 !important;
+}
+
+.nav-custom .nav-link:hover {
+    color: #064a78 !important;
+}
+
+.hero {
+    background: linear-gradient(135deg, rgba(4,34,67,0.9), rgba(16,44,90,0.85)); /* property: background */
+    color: #fff;              /* property: color */
+    padding: 1.5rem;         /* property: padding */
+}
+
+/* New: layout the profile image and social icons horizontally and responsively */
+.hero .hero-images {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* aligns images to the right on larger screens */
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+}
+
+/* ensure profile image fits the row and scales */
+.hero .hero-images .profileimg {
+    max-width: 200px;    /* reduced from 160px */
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* social icons aligned horizontally and same size */
+/* ensure rules match both structures with or without .hero-images wrapper */
+.hero .hero-images .social-icons img,
+.hero .social-icons img {
+    width: 50px;         /* smaller size */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid rgba(227,228,240,0.12);
+    display: inline-block;
+}
+
+/* make project/art thumbnails consistent and a bit smaller */
+.card-img-top {
+    width: 100%;
+    max-height: 160px;   /* reduced from 220px */
+    object-fit: cover;
+}
+
+/* Make project "text boxes" (cards) navy with light text */
+.project-list .card {
+    background-color: #032f4f; /* navy */
+    color: #e3e4f0;            /* light text */
+    border: 1px solid rgba(227,228,240,0.06);
+}
+
+.project-list .card .card-body,
+.project-list .card figcaption {
+    background-color: transparent; /* keep inner area consistent */
+    color: inherit;
+}
+
+.project-list .card .card-title,
+.project-list .card .card-text,
+.project-list .ML_text,
+.project-list .ML_sub {
+    color: #e3e4f0;
+}
+
+/* adjust buttons on project cards for contrast */
+.project-list .btn-primary {
+    background-color: #0a5f8f;
+    border-color: #064a78;
+    color: #fff;
+}
+.project-list .btn-outline-primary {
+    color: #e3e4f0;
+    border-color: rgba(227,228,240,0.12);
+}
+
+/* keep modal matching site navy theme (optional) */
+.modal-content.bg-dark {
+    background-color: #042243 !important;
+    color: #e3e4f0;
+}
+
+/* Responsive: stack and center on small screens */
+@media (max-width: 768px) {
+    .hero .hero-images {
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .hero .hero-images .profileimg {
+        max-width: 80px;  /* reduced for small screens */
+    }
+
+    .hero .hero-images .social-icons img {
+        width: 28px;      /* reduced for small screens */
+        height: 28px;
+    }
+}
+
+/* class selector */
+.button1 {
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+}
+
+/* id selector */
+#about {
+    margin-top: 2rem;
+    line-height: 1.6;
+}
+
+/* element selector */
+h2 {
+    color: #d1d4ee;
+}
+
+/* Make art page cards navy to match project cards */
+.art-list .card {
+    background-color: #032f4f; /* navy */
+    color: #e3e4f0;            /* light text */
+    border: 1px solid rgba(227,228,240,0.06);
+}
+
+/* Increase artwork image size and reduce artwork text size */
+.art-list .card {
+    overflow: hidden;
+}
+
+.art-list .card-img-top {
+    max-height: 320px;     /* larger artwork thumbnails */
+    object-fit: cover;
+    width: 100%;
+}
+
+.art-list .card-title {
+    font-size: 1rem;       /* slightly smaller title */
+    margin-bottom: 0.25rem;
+}
+
+.art-list .card-text {
+    font-size: 0.85rem;    /* smaller descriptive text */
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .art-list .card-img-top {
+        max-height: 220px; /* scale down on small screens */
+    }
+
+    .art-list .card-title {
+        font-size: 0.95rem;
+    }
+
+    .art-list .card-text {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,23 @@
+One-sentence description:
+JavaScript rotates the hero subtitle periodically and populates the Bootstrap modal with project details 
+Bootstrap is used for the responsive navbar, grid layout, cards, buttons, modal, and embed utilities.
+
+HTML tags used (10):
+1. nav
+2. a
+3. ul
+4. li
+5. main
+6. header
+7. section
+8. article
+9. figure
+10. img
+
+CSS properties used (5):
+- background-color
+- color
+- font-family
+- padding
+- object-fit
+
